@@ -31,7 +31,7 @@ const tiers = [
       'Marketing automations',
     ],
     mostPopular: true,
-    stripePriceId: 'price_1Nqc9tFnEos8XaF9BN2Ie0WR'
+    stripePriceId: '{stripePriceId}'
   },
   {
     name: 'Enterprise',

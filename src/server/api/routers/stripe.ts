@@ -18,7 +18,7 @@ export const stripeRouter = createTRPCRouter({
 
         const session = await stripe.checkout.sessions.create({
             billing_address_collection: 'auto',
-            customer: "cus_Oaq7IICDoGoL8R",
+            customer: "{insert id here}",
             line_items: [
                 {
                     price: price.id,
@@ -36,7 +36,7 @@ export const stripeRouter = createTRPCRouter({
     .mutation(async ({ ctx }) => {
 
 
-        const subscription = await stripe.checkout.sessions.retrieve("cs_test_a1l88UkhzJZ9comxMwnYuGmqpx7fLhF7UkYS4XiCS4g6trTKmIKEyR6jSG")
+        const subscription = await stripe.checkout.sessions.retrieve("{insert checkout session ID here}")
 
         const session = await stripe.billingPortal.sessions.create({
             customer: subscription.customer as string,
